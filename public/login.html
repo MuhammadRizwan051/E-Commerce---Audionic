@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="icon" href="./Images/logo for tab.png">
+    <link rel="stylesheet" href="./CSS/all.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+        #field {
+            display: flex;
+        }
+
+        @media (min-width: 1201px) {
+            form {
+                width: 33%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            form {
+                width: 38%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            form {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            form {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            form {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 355px) {
+            form {
+                width: 90%;
+                margin-top: 9rem !important;
+                height: 55vh;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: lightblue;">
+
+    <div class="container mt-5">
+        <form action="" class="mx-auto rounded-4 pb-4 bg-light"
+            style="margin-top: 10rem; box-shadow: 5px 5px 20px 5px grey;">
+            <div class="row m-0 mt-4 text-center ">
+                <h1 class="text-danger fw-bold display-5 mt-4 m-0" style="text-shadow: 2px 2px 6px grey;">Log In</h1>
+            </div>
+            <div class="row mt-4">
+                <div class="col ps-3 pe-5" id="field">
+                    <label for="username" class="text-center" style="width: 16%;"><i
+                            class="fa fa-user fs-3 py-2"></i></label>
+                    <input type="text" class="form-control mx-auto py-2" placeholder="User Name" id="username">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col ps-3 pe-5" id="field">
+                    <label for="password" class="text-center" style="width: 16%;"><i
+                            class="fa-solid fa-lock fs-3 py-2"></i></label>
+                    <input type="password" class="form-control mx-auto py-2" placeholder="Password" id="password">
+                </div>
+            </div>
+            <!-- <div class="row mt-4 mx-0">
+                <div class="col-6 p-0">
+                    <p class="ps-4 ps-sm-4 m-0"><input type="checkbox" class="me-3 me-sm-4" id="check"><label for="check">Remember
+                            Me</label></p>
+                </div>
+            </div> -->
+            <div class="row mx-0 mt-4">
+                <div class="col-8 px-0 pt-4 pb-3 mx-auto">
+                    <a href="" class="btn btn-danger py-1 fs-4" style="width: 100%;" id="login"
+                        onclick="check()">Log In
+                    </a>
+                    <p class="ps-3 ms-2 mt-3 m-0 text-center"><a href="">Forgot Password?</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const name = "Muhammad Rizwan"
+        const password = 12345
+
+        function check() {
+            let a = document.getElementById('username')
+            let z = document.getElementById('password')
+            let b = parseInt(z.value)
+
+            if (a.value === name && b === password) {
+                alert("Details are correct!")
+                let c = document.getElementById('login')
+                c.href = './dashboard.html'
+                c.target = '_blank' 
+            }
+            else if (a.value === name) {
+                alert("Wrong Password")
+            }
+            else if (b === password) {
+                alert("Wrong Username")
+            }
+            else {
+                alert("Please write it again")
+            }
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+
+</body>
+
+</html>

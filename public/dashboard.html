@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="./Images/logo for tab.png">
+    <link rel="stylesheet" href="./CSS/all.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+        .nav-item:hover {
+            /* background-color: rgb(77, 76, 76); */
+            background-color: white;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .nav-link:hover {
+            color: #274472 !important;
+        }
+
+        .nav-item,
+        .nav-link {
+            transition: 0.3s ease;
+        }
+
+        @media (min-width:1200px) {
+            #sidebar {
+                height: 100vh;
+            }
+        }
+
+        @media (max-width:991px) {
+            .nav-item a {
+                font-size: 19px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .nav-link i {
+                margin-left: 60px;
+                font-size: 22px;
+                width: 15% !important;
+            }
+        }
+
+        #dashboard {
+            color: black !important;
+            background-color: white;
+        }
+
+        #admin {
+            cursor: pointer;
+        }
+
+        #customer i:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #ratings {
+            color: #FFC107 !important;
+        }
+    </style>
+</head>
+<!-- #003060 -->
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-0">
+            <div class="col-xl-2 col-md-3 col-sm-4 px-0 pt-5 pb-5" id="sidebar"
+                style="background-color: #0C2D48 !important;">
+                <a class="navbar-brand ms-3" href="./index.html">
+                    <img src="./Images/logo.webp" height="40px">
+                </a>
+                <ul class="navbar-nav pt-5">
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./index.html"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-house"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./categories.html"><i style="width:25%"
+                                class="me-md-2 fa-brands fa-windows"></i>Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./headphones.html"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-headphones"></i>Headphones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./airbuds.html"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-phone-volume"></i>Airbuds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./speakers.html"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-bullhorn"></i>Speakers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./about_us.html"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-user"></i>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-lg-4 ms-sm-3 text-light" href="./contact_us.html"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-phone"></i>Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-lg-4 ms-sm-3" href="./login.html"
+                            onclick="alert('Are you sure you want to logout?')"><i style="width:25%"
+                                class="me-md-2 fa-solid fa-power-off"></i>Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-10 col-md-9 col-sm-8 bg-light px-3 mt-0 pt-0">
+                <div class="row mt-0 mx-0">
+                    <div class="col-xxl-7 col-lg-8 col-md-8 col-sm-9 col-9 ms-sm-3 ms-2 px-0 py-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control py-2" id="autoSizingInputGroup"
+                                list="datalistOptions" placeholder="Type to search...">
+                            <div class="input-group-text"><i class="fa fa-search"></i></div>
+                            <datalist id="datalistOptions">
+                                <option value="Orders">
+                                <option value="Products">
+                                <option value="Inventory">
+                                <option value="Customers">
+                                <option value="Analytics">
+                            </datalist>
+                        </div>
+                    </div>
+                    <div
+                        class="col-xxl-1 col-lg-1 col-md-2 col-sm-2 col-2 ms-3 ms-sm-2 ms-md-auto me-md-3 pt-3 text-end p-0">
+                        <img src="./Images/Admin DP.jfif" title="Admin: Muhammad Rizwan" width="50"
+                            class="rounded-circle" id="admin">
+                    </div>
+                </div>
+
+                <div class="row pt-4 mt-0 mx-0">
+                    <div class="col-xl-3 col-md-6 col-12 pt-4">
+                        <div class="card1 bg-white py-xl-5 py-4" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row m-0">
+                                <div class="col-8 ps-xl-3 ps-lg-4 ps-3">
+                                    <p class="fw-bold fs-3">115</p>
+                                    <p class="text-muted fs-3">Orders</p>
+                                </div>
+                                <div class="col-4 text-center pt-4 fs-1">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 pt-4">
+                        <div class="card1 bg-white py-xl-5 py-4" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row m-0">
+                                <div class="col-8 ps-xl-3 ps-lg-4 ps-3">
+                                    <p class="fw-bold fs-3">30</p>
+                                    <p class="text-muted fs-3">Products</p>
+                                </div>
+                                <div class="col-4 text-center pt-4 fs-1">
+                                    <i class="fa-solid fa-gift"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 pt-4">
+                        <div class="card1 bg-white py-xl-5 py-4" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row m-0">
+                                <div class="col-8 ps-xl-3 ps-lg-4 ps-3">
+                                    <p class="fw-bold fs-3">720</p>
+                                    <p class="text-muted fs-3">Inventory</p>
+                                </div>
+                                <div class="col-4 text-center pt-4 fs-1">
+                                    <i class="fa-solid fa-cart-flatbed"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 pt-4">
+                        <div class="card1 bg-white py-xl-5 py-4" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row m-0">
+                                <div class="col-8 ps-xl-3 ps-lg-4 ps-3">
+                                    <p class="fw-bold fs-3">885</p>
+                                    <p class="text-muted fs-3">Customer</p>
+                                </div>
+                                <div class="col-4 text-center pt-4 fs-1">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mx-0 mt-5 py-5">
+                    <div class="col-lg-6 col-xl-4 mb-5">
+                        <div class="card1 py-4 bg-white" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row mt-0 mx-0">
+                                <span class="col-8 px-0 ps-xl-2 ps-3 fs-4 fw-bold">Order Activity</span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-7 ps-xl-4 ps-3 px-0 py-2">
+                                    <i style="width:20%" class="fa-solid fa-file-invoice "></i>
+                                    <span class="ms-1">Received</span>
+                                </span>
+                                <span class="col-5 py-2 text-muted text-end" id="customer">25 mins ago</span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-7 ps-xl-4 ps-3 px-0 py-2">
+                                    <i style="width:20%" class="fa-regular fa-note-sticky"></i>
+                                    <span class="ms-1">Dispatched</span>
+                                </span>
+                                <span class="col-5 py-2 text-muted text-end" id="customer">7 hours ago</span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-7 ps-xl-4 ps-3 px-0 py-2">
+                                    <i style="width:20%" class="fa fa-location-dot"></i>
+                                    <span class="ms-1">Delivered</span>
+                                </span>
+                                <span class="col-5 py-2 text-muted text-end" id="customer">19 days ago</span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-7 ps-xl-4 ps-3 px-0 py-2">
+                                    <i style="width:20%" class="fa-solid fa-cart-shopping"></i>
+                                    <span class="ms-1">Invoice</span>
+                                </span>
+                                <span class="col-5 py-2 text-muted text-end" id="customer">2 weeks ago</span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-7 ps-xl-4 ps-3 px-0 py-2">
+                                    <i style="width:20%" class="fa-solid fa-ban"></i>
+                                    <span class="ms-1">Cancelled</span>
+                                </span>
+                                <span class="col-5 py-2 text-muted text-end" id="customer">4 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-xl-4 mb-5">
+                        <div class="card1 py-4 bg-white" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row mt-0 mx-0">
+                                <span class="col-8 px-0 ps-xl-2 ps-3 fs-4 fw-bold">Top Selling</span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Airbud 4.webp" width="35" class="rounded-circle">
+                                    <span class="ms-1">Airbud 01</span>
+                                </span>
+                                <span class="col-4 py-2 text-center p-0" id="ratings">
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star-half-stroke" style="width: 15%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Airbud 6.webp" width="35" class="rounded-circle">
+                                    <span class="ms-1">Airbud 02</span>
+                                </span>
+                                <span class="col-4 py-2 text-center p-0" id="ratings">
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-regular fa-star" style="width: 15%;"></i>
+                                    <i class="fa-regular fa-star" style="width: 15%;"></i>
+                                    <i class="fa-regular fa-star" style="width: 15%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Speaker 6.webp" width="35" class="rounded-circle">
+                                    <span class="ms-1">Speaker 01</span>
+                                </span>
+                                <span class="col-4 py-2 text-center p-0" id="ratings">
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-regular fa-star" style="width: 15%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Headphone 5.webp" width="35" class="rounded-circle">
+                                    <span class="ms-1">Headphone 01</span>
+                                </span>
+                                <span class="col-4 py-2 text-center p-0" id="ratings">
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star-half-stroke" style="width: 15%;"></i>
+                                    <i class="fa-regular fa-star" style="width: 15%;"></i>
+                                    <i class="fa-regular fa-star" style="width: 15%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Headphone 8.webp" width="35" class="rounded-circle">
+                                    <span class="ms-1">Headphone 02</span>
+                                </span>
+                                <span class="col-4 py-2 text-center p-0" id="ratings">
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                    <i class="fa-solid fa-star" style="width: 15%;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card1 py-4 bg-white" style="box-shadow: 2px 2px 8px grey;">
+                            <div class="row mt-0 mx-0">
+                                <span class="col-8 px-0 ps-xl-2 ps-3 fs-4 fw-bold">New Customer </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Admin DP.jfif" width="35" class="rounded-circle">
+                                    <span class="ms-1">Muhammad Rizwan</span>
+                                </span>
+                                <span class="col-4 py-2 text-center" id="customer">
+                                    <i class="fa fa-user" style="width: 28%;"></i>
+                                    <i class="fa fa-message" style="width: 28%;"></i>
+                                    <i class="fa fa-phone" style="width: 28%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Admin DP.jfif" width="35" class="rounded-circle">
+                                    <span class="ms-1">Muhammad Rizwan</span>
+                                </span>
+                                <span class="col-4 py-2 text-center" id="customer">
+                                    <i class="fa fa-user" style="width: 28%;"></i>
+                                    <i class="fa fa-message" style="width: 28%;"></i>
+                                    <i class="fa fa-phone" style="width: 28%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Admin DP.jfif" width="35" class="rounded-circle">
+                                    <span class="ms-1">Muhammad Rizwan</span>
+                                </span>
+                                <span class="col-4 py-2 text-center" id="customer">
+                                    <i class="fa fa-user" style="width: 28%;"></i>
+                                    <i class="fa fa-message" style="width: 28%;"></i>
+                                    <i class="fa fa-phone" style="width: 28%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Admin DP.jfif" width="35" class="rounded-circle">
+                                    <span class="ms-1">Muhammad Rizwan</span>
+                                </span>
+                                <span class="col-4 py-2 text-center" id="customer">
+                                    <i class="fa fa-user" style="width: 28%;"></i>
+                                    <i class="fa fa-message" style="width: 28%;"></i>
+                                    <i class="fa fa-phone" style="width: 28%;"></i>
+                                </span>
+                            </div>
+                            <div class="row mt-3 mx-0">
+                                <span class="col-8 ps-xl-2 ps-3 px-0">
+                                    <img src="./Images/Admin DP.jfif" width="35" class="rounded-circle">
+                                    <span class="ms-1">Muhammad Rizwan</span>
+                                </span>
+                                <span class="col-4 py-2 text-center" id="customer">
+                                    <i class="fa fa-user" style="width: 28%;"></i>
+                                    <i class="fa fa-message" style="width: 28%;"></i>
+                                    <i class="fa fa-phone" style="width: 28%;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+</body>
+<!-- 
+    <i class="fa-solid fa-house-chimney"></i>
+    <i class="fa-solid fa-bag-shopping"></i>
+    <i class="fa-solid fa-gift"></i>
+    <i class="fa-solid fa-cart-flatbed"></i>
+    <i class="fa-solid fa-chart-simple">
+    <i class="fa-solid fa-gear"></i>
+    <i class="fa-solid fa-circle-question"></i>
+ -->
+
+</html>
